@@ -6,7 +6,4 @@ MAINTAINER Dima Kuznetsov "dmitrykuzn@gmail.com"
 RUN apk update && \
     apk add minidlna
 
-ADD minidlna.conf /etc/
-VOLUME /media/storage
-
 ENTRYPOINT ["minidlnad", "-R", "-S"]
